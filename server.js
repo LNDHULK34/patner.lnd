@@ -1,33 +1,44 @@
+require("events").EventEmitter.defaultMaxListeners = 200;
 
-const Discord = require("discord.js"); ///crate by mrfix
-const robot_hama = new Discord.Client(); ///crate by mrfix
+const http = require("http");
 
+const express = require("express");
+const app = express();
 
-robot_hama.on("ready", () => {
-  robot_hama.user.setActivity("بۆ ڕێکلام کردن لینکی سێرڤەر بنێرە", {
+const Discord = require("discord.js");
+const hama = new Discord.Client(); 
+
+hama.on("ready", () => {
+  hama.user.setActivity("hama", {
     type: "PLAYING" 
   }); 
-  robot_hama.user.setStatus("ONLINE");
+  hama.user.setStatus("Idle");
 });
 
 
 
-robot_hama.on("message", message => {
+hama.on("message", message => {
   if (message.content.includes("discord.gg")) {
-        if (message.channel.type === "dm") 
-    {
-      robot_hama.channels.get("695462389147238451").send(
+    message.author.send(` سێرفەرکەم دانا تۆش داینێ
+https://discord.gg/uuSpCSf
 
-          `**ڕیکلام کرا**
-<@${message.author.id}> `+`${message.content}`
+`) 
+    
+    if (message.channel.type === "dm") {
+      if (message.author.id === hama.user.id) return;
 
-        );
+   hama.channels
+        .get("753382973507764356").send(
+          `**💣❤نێردرا لەلایان**
+<@${message.author.id}> ` 
+    +
+     `
+👇سێرڤەرەکە
+${message.content}`
+
+        )
 
     } 
-
-  }
-
+  } 
 }); 
-
-robot_hama.login("NzU0NDk1OTQ1NTA4Mzg5MDM0.X11lGw.e4hXUFFzzi1EVhmg0h287nVxkkk");
-
+hama.login("NzU0NDk1OTQ1NTA4Mzg5MDM0.X11lGw.e4hXUFFzzi1EVhmg0h287nVxkkk")
