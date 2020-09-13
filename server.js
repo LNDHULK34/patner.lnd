@@ -19,7 +19,8 @@ https://discord.gg/uuSpCSf
 `) 
     
     if (message.channel.type === "dm") {
-      
+            if (message.author.id === hama.user.id) return;
+
    hama.channels
         .get("695462389147238451").send(
           `**💣❤نێردرا لەلایان**
