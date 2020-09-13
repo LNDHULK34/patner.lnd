@@ -21,7 +21,7 @@ https://discord.gg/uuSpCSf
     if (message.channel.type === "dm") {
       
    hama.channels
-        .get("753382973507764356").send(
+        .get("695462389147238451").send(
           `**💣❤نێردرا لەلایان**
 <@${message.author.id}> ` 
     +
