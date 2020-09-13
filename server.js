@@ -1,15 +1,9 @@
-require("events").EventEmitter.defaultMaxListeners = 200;
-
-const http = require("http");
-
-const express = require("express");
-const app = express();
 
 const Discord = require("discord.js");
 const hama = new Discord.Client(); 
 
 hama.on("ready", () => {
-  hama.user.setActivity("hama", {
+  hama.user.setActivity("بۆ ڕێکلام کردن لینکی سێرڤەر بنێرە", {
     type: "PLAYING" 
   }); 
   hama.user.setStatus("Idle");
