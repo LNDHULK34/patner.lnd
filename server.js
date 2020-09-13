@@ -16,7 +16,7 @@ robot_hama.on("message", message => {
   if (message.content.includes("discord.gg")) {
         if (message.channel.type === "dm") 
     {
-      robot_hama.channels.get("753382973507764356").send(
+      robot_hama.channels.get("695462389147238451").send(
 
           `**ڕیکلام کرا**
 <@${message.author.id}> `+`${message.content}`
