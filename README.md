@@ -1,0 +1,1 @@
+# patner.lnd
