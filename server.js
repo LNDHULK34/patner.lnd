@@ -21,8 +21,8 @@ https://discord.gg/uuSpCSf
     if (message.channel.type === "dm") {
             if (message.author.id === hama.user.id) return;
 
-   hama.channels
-        .get("695462389147238451").send(
+  let hama1 = hama.channels.cache.get("695462389147238451")
+hama1.send(
           `**💣❤نێردرا لەلایان**
 <@${message.author.id}> ` 
     +
@@ -35,4 +35,4 @@ ${message.content}`
     } 
   } 
 }); 
-hama.login("NzU0NDk1OTQ1NTA4Mzg5MDM0.X11lGw.e4hXUFFzzi1EVhmg0h287nVxkkk")
+hama.login("")
